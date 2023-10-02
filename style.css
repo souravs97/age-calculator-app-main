@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,700;1,400;1,800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  /* primary color */
+
+  --purple: hsl(259, 100%, 65%);
+  --light-red: hsl(0, 100%, 67%);
+
+  /* Neutral */
+
+  --off-white: hsl(0, 0%, 94%);
+  --light-grey: hsl(0, 0%, 86%);
+  --smokey-grey: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
+}
+html,
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--off-white);
+}
+main {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  height: 70vh;
+  width: 800px;
+  background-color: white;
+  border-radius: 30px 30px 25% 30px;
+  padding: 50px;
+  position: relative;
+}
+.day,
+.month,
+.year {
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+  color: var(--smokey-grey);
+}
+.date-input {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.error-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 30px;
+  position: relative;
+}
+
+.date-input input {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid var(--light-grey);
+  font-weight: 800;
+  font-size: 32px;
+  margin: 10px 0;
+}
+.date-input input:focus-visible {
+  outline: 1px solid var(--purple);
+}
+.date-input input::-webkit-inner-spin-button {
+  display: none;
+}
+.error {
+  font-size: 12px;
+  color: var(--light-red);
+  font-style: italic;
+  font-weight: 400;
+  text-transform: none;
+  position: absolute;
+  display: none;
+}
+hr {
+  margin: 30px 0;
+  opacity: 0.4;
+}
+.btn-container {
+  position: relative;
+  width: 100%;
+}
+.arrow {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  height: 80px;
+  width: 80px;
+  background-color: var(--purple);
+  padding: 24px;
+  border-radius: 50%;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.arrow:hover {
+  background-color: var(--off-black);
+}
+.arrow img {
+  width: 100%;
+}
+.result {
+  font-style: italic;
+  font-size: clamp(20px, 4vw, 40px);
+}
+.result .number {
+  color: var(--purple);
+}
+.day-error,
+.month-error,
+.year-error {
+  position: relative;
+  width: 160px;
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    padding: 20px;
+    margin: 20px;
+    width: 90%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 30px 30px 30% 30px;
+  }
+
+  .day,
+  .month,
+  .year {
+    width: 90px;
+    font-size: 12px;
+  }
+  .date-input input {
+    font-size: 20px;
+    padding: 10px 15px;
+  }
+  .date-input {
+    gap: 10px;
+    justify-content: space-between;
+  }
+  .arrow {
+    height: 60px;
+    width: 60px;
+    padding: 16px;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+  .error-container {
+    top: -25px;
+  }
+}

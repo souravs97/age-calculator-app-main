@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Age calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="date-input">
+          <div class="day">
+            <label for="dt" id="day-label">Day</label>
+            <input type="number" inputmode="numeric" id="dt" placeholder="DD" />
+          </div>
+          <div class="month">
+            <label for="mt" id="month-label">Month</label>
+            <input type="number" inputmode="numeric" id="mt" placeholder="MM" />
+          </div>
+          <div class="year">
+            <label for="yr" id="year-label">Year</label>
+            <input
+              type="number"
+              inputmode="numeric"
+              id="yr"
+              placeholder="YYYY"
+            />
+          </div>
+        </div>
+        <div class="error-container">
+          <div class="day-error">
+            <p class="error" id="empty-date">This field is required</p>
+            <p class="error" id="invalid-date">Must be a valid day</p>
+          </div>
+          <div class="month-error">
+            <p class="error" id="empty-month">This field is required</p>
+            <p class="error" id="invalid-month">Must be a valid month</p>
+          </div>
+          <div class="year-error">
+            <p class="error" id="empty-year">This field is required</p>
+            <p class="error" id="invalid-year">Must be in the past</p>
+          </div>
+        </div>
+
+        <div class="btn-container">
+          <hr />
+          <div class="arrow">
+            <img src="assets/images/icon-arrow.svg" alt="" />
+          </div>
+        </div>
+        <div class="result">
+          <div class="result-year">
+            <h1><span class="number" id="YY">- - </span>years</h1>
+          </div>
+          <div class="result-month">
+            <h1><span class="number" id="MM">- - </span>months</h1>
+          </div>
+          <div class="result-day">
+            <h1><span class="number" id="DD">- - </span>days</h1>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+    <!-- Day
+  DD
+
+  Month
+  MM
+
+  Year
+  YYYY
+
+  -- years
+  -- months
+  -- days
+  
+   -->
+  </body>
+</html>
