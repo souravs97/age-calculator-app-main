@@ -48,6 +48,7 @@ resultsButton.addEventListener("click", function () {
   monthsIndex = months[userMonth - 1];
 
   leapyear(userYear);
+
   // Check Year
 
   function validateYear() {
@@ -128,9 +129,10 @@ resultsButton.addEventListener("click", function () {
     ) {
       calculate();
     } else {
-      alert("error");
+      // alert("error");
     }
   }
+
   // Calculate Age
 
   function calculate() {
@@ -171,6 +173,5 @@ resultsButton.addEventListener("click", function () {
   validateMonth();
   validateDate();
   empty();
-  // cc();
   // calculate();
 });
