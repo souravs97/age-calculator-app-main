@@ -40,14 +40,13 @@ resultsButton.addEventListener("click", function () {
   let userYear = yearInput.value;
   let userMonth = monthInput.value;
   let userDate = dateInput.value;
+  leapyear(userYear);
 
   dayDiff = currentDate - userDate;
   monthDiff = currentMonth - userMonth;
   yearDiff = currentYear - userYear;
 
   monthsIndex = months[userMonth - 1];
-
-  leapyear(userYear);
 
   // Check Year
 
@@ -141,19 +140,22 @@ resultsButton.addEventListener("click", function () {
       resultMonth.innerHTML = monthDiff;
       resultDate.innerHTML = dayDiff;
     }
-    if (currentMonth < userMonth) {
-      yearDiff--;
-      resultYear.innerHTML = yearDiff;
+    if (
+      currentMonth < userMonth ||
+      (currentMonth == userMonth && currentDate < userDate)
+    ) {
+      resultYear.innerHTML = yearDiff - 1;
       resultMonth.innerHTML = monthDiff + 12;
     }
 
     if (currentDate < userDate) {
       monthDiff--;
+
       resultMonth.innerHTML = monthDiff;
       resultDate.innerHTML = dayDiff + monthsIndex;
       if (monthDiff < 0) {
-        resultMonth.innerHTML = monthDiff + 12;
-        // resultDate.innerHTML = dayDiff + monthsIndex;
+        resultMonth.innerHTML = monthDiff += 12;
+        resultDate.innerHTML = dayDiff + monthsIndex + 1;
       }
     }
   }
