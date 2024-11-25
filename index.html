@@ -24,10 +24,18 @@
           <div class="day">
             <label for="dt" id="day-label">Day</label>
             <input type="number" inputmode="numeric" id="dt" placeholder="DD" />
+            <div class="day-error">
+              <p class="error" id="empty-date">This field is required</p>
+              <p class="error" id="invalid-date">Must be a valid day</p>
+            </div>
           </div>
           <div class="month">
             <label for="mt" id="month-label">Month</label>
             <input type="number" inputmode="numeric" id="mt" placeholder="MM" />
+            <div class="month-error">
+              <p class="error" id="empty-month">This field is required</p>
+              <p class="error" id="invalid-month">Must be a valid month</p>
+            </div>
           </div>
           <div class="year">
             <label for="yr" id="year-label">Year</label>
@@ -37,22 +45,13 @@
               id="yr"
               placeholder="YYYY"
             />
+            <div class="year-error">
+              <p class="error" id="empty-year">This field is required</p>
+              <p class="error" id="invalid-year">Must be in the past</p>
+            </div>
           </div>
         </div>
-        <div class="error-container">
-          <div class="day-error">
-            <p class="error" id="empty-date">This field is required</p>
-            <p class="error" id="invalid-date">Must be a valid day</p>
-          </div>
-          <div class="month-error">
-            <p class="error" id="empty-month">This field is required</p>
-            <p class="error" id="invalid-month">Must be a valid month</p>
-          </div>
-          <div class="year-error">
-            <p class="error" id="empty-year">This field is required</p>
-            <p class="error" id="invalid-year">Must be in the past</p>
-          </div>
-        </div>
+        <!-- <div class="error-container"></div> -->
 
         <div class="btn-container">
           <hr />
