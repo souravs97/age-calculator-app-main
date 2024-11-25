@@ -33,7 +33,7 @@ main {
   align-items: center;
 }
 .container {
-  height: 70vh;
+  min-height: 70vh;
   width: 800px;
   background-color: white;
   border-radius: 30px 30px 25% 30px;
@@ -128,12 +128,12 @@ hr {
   width: 160px;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 500px) {
   .container {
     padding: 20px;
     margin: 20px;
     width: 90%;
-    height: 80vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -144,7 +144,7 @@ hr {
   .day,
   .month,
   .year {
-    width: 100%;
+    width: 100% !important;
     font-size: 12px;
     margin: 20px 0;
   }
@@ -170,5 +170,24 @@ hr {
   }
   .error {
     position: static;
+  }
+}
+@media screen and (max-width: 900px) {
+  .container {
+    width: 90%;
+    min-height: 50%;
+  }
+  .day,
+  .month,
+  .year {
+    width: 25%;
+  }
+  .date-input input {
+    font-size: 18px;
+  }
+  .arrow {
+    height: 50px;
+    width: 50px;
+    padding: 12px;
   }
 }
