@@ -175,5 +175,4 @@ resultsButton.addEventListener("click", function () {
   validateMonth();
   validateDate();
   empty();
-  // calculate();
 });
